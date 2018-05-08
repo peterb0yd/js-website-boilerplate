@@ -6,10 +6,10 @@ exports.blog_page = async (req, res) => {
   try {
     const entries = await contentful.getEntries({
       order: '-sys.createdAt',
-      content_type: 'blogPost'
+      content_type: '<your_blog_content_type>'
     })
-    // Convert Markdown to HTML - and convert titles
-    const posts = converter.convertPosts(entries.items)
+    // Convert Markdown to HTML
+    const posts = converter.getPosts(entries.items)
     // Send posts with HTML
     res.render('blog', { title: '<name> | Blog', posts })
   } catch (e) {
@@ -23,12 +23,12 @@ exports.post_page = async (req, res) => {
   try {
     const entries = await contentful.getEntries({
       order: '-sys.createdAt',
-      content_type: 'blogPost'
+      content_type: '<your_blog_content_type>'
     })
     // Convert Markdown to HTML
-    const post = converter.convertPost(entries.items, req.params.title)
+    const post = converter.getPost(entries.items, req.params.title)
     // Send posts with HTML
-    res.render('post', { title: `RotorScape | ${post.fields.title}`, post })
+    res.render('post', { title: `<name> | ${post.fields.title}`, post })
   } catch (e) {
     console.log(e)
     res.status(500).send()
