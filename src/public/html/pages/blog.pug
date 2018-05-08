@@ -1,0 +1,26 @@
+include ../shared/head.pug
+
+html
+  body(onload='onloadHandler()')
+    include ../layout/header.pug
+
+    div#overlay
+    div#blog.content
+      h1.page-title Blog
+      div.title-line
+      h2.page-tagline Topics that matter
+      ul
+        each post in posts
+          li
+            div.column
+              img(src=post.fields.featureImage.fields.file.url)
+            div.column
+              div.text
+                h2= post.fields.title
+                p!= post.fields.content.split(/<\/p>/).slice(0,1).join(' ').split(/\s+/).slice(0,26).join(' ')+'...'
+                a.read-more(href=`blog/${post.fields.urlSafeTitle}`)
+                  include ../shared/arrow.pug
+
+
+
+include ../layout/footer.pug

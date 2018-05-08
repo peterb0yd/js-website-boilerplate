@@ -1,0 +1,32 @@
+//- include ../shared/head.pug
+//- include ../shared/vue.pug
+//-
+//- html
+//-   body(onload='setLoaded()')
+//-     include ../layout/header.pug
+//-
+//-     div#overlay
+//-     div.content#contact
+//-       h1.page-title Contact
+//-       div.title-line
+//-       h2.page-tagline Let's get in touch
+//-
+//-       div.container
+//-         a#schedule-button(target='_blank', href='https://cal.mixmax.com/boydvision') Click here to schedule a call with our CEO
+//-
+//-         transition(mode='out-in' name='fade')
+//-           form(v-if='!submitted')
+//-             input(name='name'         placeholder='Your name...'     type='text' maxlength='80'    v-model='name'     :class="{ error: nameErrored }")
+//-             input(name='email'        placeholder='Your email...'    type='text' maxlength='80'    v-model='email'    :class="{ error: emailErrored }")
+//-             textarea(name='message'   placeholder='Your message...'  type='text' maxlength='1000'  v-model='message'  :class="{ error: messageErrored }")
+//-             button(type='submit' @mouseenter="entered" @mouseleave="exited" @click.prevent='submit' :class='{ disabled: (formHasErrors || isLoading) }') Submit
+//-
+//-           div#submitted-container(v-else)
+//-             h2 Your message has been submitted!
+//-             p We will respond to you shortly.
+//-
+//-
+//-     script(src='/javascript/contact.js')
+//-
+//-
+//- include ../layout/footer.pug
