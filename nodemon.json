@@ -1,0 +1,15 @@
+{
+  "ignore": [
+    ".git",
+    "node_modules/**/node_modules",
+    "public/_css/*",
+    "public/_javascript/*"
+  ],
+  "events": {
+    "restart": "gulp"
+  },
+  "watch": [
+    "public/**/**.*",
+    "server.js"
+  ]
+}

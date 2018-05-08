@@ -1,0 +1,27 @@
+//- include ../shared/head.pug
+//-
+//- html
+//-   body(onload='setLoaded()')
+//-     include ../layout/header.pug
+//-
+//-     div#overlay
+//-     div.feature-image
+//-       img(src=post.fields.featureImage.fields.file.url)
+//-     div#post.content
+//-       h1= post.fields.title
+//-       div.body
+//-         .text!= post.fields.content
+//-       #actions
+//-         .column
+//-           if post.previousPost
+//-             a.previous-post(href=`${post.previousPost}`)
+//-               include ../shared/arrow.pug
+//-               p Previous
+//-         .column
+//-           if post.nextPost
+//-             a.next-post(href=`${post.nextPost}`)
+//-               p Next
+//-               include ../shared/arrow.pug
+//-
+//-
+//- include ../layout/footer.pug

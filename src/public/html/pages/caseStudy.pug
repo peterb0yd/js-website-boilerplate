@@ -1,0 +1,38 @@
+//- include ../shared/head.pug
+//-
+//- html
+//-   body(onload='setLoaded()')
+//-     include ../layout/header.pug
+//-
+//-     #overlay
+//-     #work.content
+//-       h1.page-title= work.fields.clientName
+//-       div.title-line
+//-       h2.page-tagline What we've done. In detail.
+//-
+//-       #display
+//-         #description!= work.fields.description
+//-
+//-         each image in work.fields.screenshots
+//-           div.img-container
+//-             img(src=image.fields.file.url)
+//-
+//-         #info
+//-           h2 The result
+//-           .result!= work.fields.results
+//-           #actions
+//-             .column
+//-               if work.previousWork
+//-                 a.previous-work(href=`${work.previousWork}`)
+//-                   include ../shared/arrow.pug
+//-                   p Previous
+//-             .column
+//-               a.launch.button(href=work.fields.website, target='_blank') Launch
+//-             .column
+//-               if work.nextWork
+//-                 a.next-work(href=`${work.nextWork}`)
+//-                   p Next
+//-                   include ../shared/arrow.pug
+//-
+//-
+//- include ../layout/footer.pug
