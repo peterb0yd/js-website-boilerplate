@@ -2,17 +2,12 @@
 //- include ../shared/vue.pug
 //-
 //- html
-//-   body(onload='setLoaded()')
+//-   body(onload='onloadHandler()')
 //-     include ../layout/header.pug
 //-
-//-     div#overlay
-//-     div.content#contact
-//-       h1.page-title Contact
-//-       div.title-line
-//-       h2.page-tagline Let's get in touch
+//-     div#contact
 //-
 //-       div.container
-//-         a#schedule-button(target='_blank', href='https://cal.mixmax.com/boydvision') Click here to schedule a call with our CEO
 //-
 //-         transition(mode='out-in' name='fade')
 //-           form(v-if='!submitted')

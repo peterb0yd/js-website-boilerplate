@@ -1,72 +1,12 @@
 include ../shared/head.pug
 
 
-html
-  body
-    div.container
-      img(src='http://res.cloudinary.com/toprocklabs/image/upload/c_scale,f_auto,w_800/v1513263562/TopRockLogo_tcrasa.png')
-      h2 Good things are coming.
-      h4 info@toprocklabs.com
-      h4 (240) 723-5209
-
-
 //-
 //- html
-//-   body.home(onload='bodyLoaded()' onscroll='homeScrolling()')
-//-     include ../layout/header.pug
+//-   body.home(onload='onloadHandler()')
 //-
-//-     div#loader
-//-       include ../shared/loader.pug
-//-     video#background-video(playsinline autoplay loop muted src='https://res.cloudinary.com/boydvision/video/upload/f_auto,q_80/v1500760786/fly_sky_night_utrnln.mp4' onloadeddata='videoLoaded()')
-//-     div#overlay
-//-     div#big-logo(onmouseover='logoEntered()')
-//-       img.full(src='https://res.cloudinary.com/boydvision/image/upload/v1500750856/boyd_black_ttnhkk.png')
-//-       img.watermark(src='https://res.cloudinary.com/boydvision/image/upload/v1505849337/boyd_icon_small_sruq52.png')
-//-
-//-     div#home.content
-//-       div.row
-//-         div.container
-//-           h1#hello &nbsp;
-//-           p#summary.
-//-             At BoydVision, we build your digital products. With our designers and developers, we're believers
-//-             of collaboration between disciplines to create thoughtful solutions.
-//-           a#contact-button.button(href='/contact') Let's build
-//-
-//-       div.row.scrolled
-//-         div.container
-//-           h2.row-title.animated.hidden We build with our clients in mind
-//-           p.row-paragraph.animated.hidden We’ve found that most designers and developers aim to get you a product without much thought of your philosophy and your true “why”.
-//-           p.row-paragraph.animated.hidden We help you dig deep into what you and your customers truly care about, creating the foundation for a better product and service.
-//-           p.row-paragraph.animated.hidden We’re designers and developers that want to create something you’ll love. We’re here to help you succeed.
-//-
-//-
-//-       div.row
-//-         h2.row-title.hidden What we proudly do
-//-
-//-         //- IMAGE
-//-
-//-         div.service.top
-//-           div.image.hidden
-//-             img(src='https://res.cloudinary.com/boydvision/image/upload/v1504921006/iMac_with_d_B-09_ouwons.png')
-//-           div.text
-//-             h2 Develop
-//-             ul
-//-               li Websites
-//-               li Web &amp; Mobile Applications
-//-               li Test Suites
-//-               li Custom Software
-//-
-//-         div.service
-//-           div.image.hidden
-//-             img(src='https://res.cloudinary.com/boydvision/image/upload/v1504921006/iPhone_with_dreamy-10_lwmoka.png')
-//-           div.text
-//-             h2 Design
-//-             ul
-//-               li UI/UX Design
-//-               li Business Cards
-//-               li Modern Branding
-//-               li Contemporary Logos
-//-
+//-   div#home 
+//-     ...stuff goes here
 //-
 //-
 //- include ../layout/footer.pug

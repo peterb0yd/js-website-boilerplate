@@ -1,14 +1,11 @@
 //- include ../shared/head.pug
 //-
 //- html
-//-   body(onload='setLoaded()')
+//-   body(onload='onloadHandler()')
 //-     include ../layout/header.pug
 //-
-//-     #overlay
-//-     #work.content
+//-     div#work
 //-       h1.page-title= work.fields.clientName
-//-       div.title-line
-//-       h2.page-tagline What we've done. In detail.
 //-
 //-       #display
 //-         #description!= work.fields.description
